@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Mi primer java script</h2>
+
+	<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Dale Aceptar, veras la hora y fecha</button>
+	<p id="demo"></p>
+
+	<h2>que puede hacer JS</h2>
+	<p id="demo1">cambia el contenido</p>
+
+	<button type="button" onclick="document.getElementById('demo1').innerHTML = 'Hola Java Script'">Dale click</button>
+	<hr>
+	<p>puede cambiar los atributos y sus valores</p>
+	<p>vamos a cambiar imagenes</p>
+
+	<button onclick="document.getElementById('myImage').src='fotografias/azul.gif'">Color azul</button>
+
+	<img Id="myImage" src="fotografias/verde.gif" style="width:100px">
+
+	<button onclick="document.getElementById('myImage').src='fotografias/amarillo.gif'">Color amarillo</button>
+	<hr>
+	<p Id="demo2">cambia el tamaño del contenido</p>
+	<p Id="demo3">esconde el contenido</p>
+
+	<button  type="button" onclick="document.getElementById('demo2').style.fontSize='40px'">Aceptar</button>
+	
+	<button  type="button" onclick="document.getElementById('demo3').style.display='none'">Aceptar</button>
+
+
+</body>
+</html>
