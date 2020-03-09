@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<script>
+		function miFuncion(){
+			document.getElementById('demo').innerHTML="Ponemos aca lo que queremos que aparezca al momento de dar click  en el primer boton PRIMER PRUEBA";
+		}
+
+		function otraFuncion() {
+			document.getElementById('demo').innerHTML="Pondremos lo que deseamos  al darle un segundo click en otro boton SEGUNDA PRUEBA";
+		}
+	</script>
 </head>
 <body>
-	<h2>Mi primer java script</h2>
+	<h2>Encabezado JavaScript</h2>
+	<p id="demo">Dira algo inicialmente prueba</p>
+	<button type="button" onclick="miFuncion()">Prueba 1</button>
+	<button type="button1" onclick="otraFuncion()">Prueba 2</button>
 
-	<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Dale Aceptar, veras la hora y fecha</button>
-	<p id="demo"></p>
-
-	<h2>que puede hacer JS</h2>
-	<p id="demo1">cambia el contenido</p>
-
-	<button type="button" onclick="document.getElementById('demo1').innerHTML = 'Hola Java Script'">Dale click</button>
-	<hr>
-	<p>puede cambiar los atributos y sus valores</p>
-	<p>vamos a cambiar imagenes</p>
-
-	<button onclick="document.getElementById('myImage').src='fotografias/azul.gif'">Color azul</button>
-
-	<img Id="myImage" src="fotografias/verde.gif" style="width:100px">
-
-	<button onclick="document.getElementById('myImage').src='fotografias/amarillo.gif'">Color amarillo</button>
-	<hr>
-	<p Id="demo2">cambia el tamaño del contenido</p>
-	<p Id="demo3">esconde el contenido</p>
-
-	<button  type="button" onclick="document.getElementById('demo2').style.fontSize='40px'">Aceptar</button>
-	
-	<button  type="button" onclick="document.getElementById('demo3').style.display='none'">Aceptar</button>
-	
 	<hr>
 
-	<h2>usando el script en body</h2>
-	<p id="demo4"></p>
+	<h2>Usaremos un archivo externo</h2>
+	<p id="demo2">escriba algo</p>
+	<button type="button2" onclick="miNuevaFuncion()">aceptar</button>
+	<script src="miScript.js"></script>
+
+	<hr>
+
+	<h2>Prueba de suma</h2>
+	<p>Veremos como se usa la suma</p>
+	<p id="demo3"></p>
+
 	<script>
-		document.getElementById('demo4').innerHTML="Mi primer  escrito usando el script"
+		document.getElementById('demo3').innerHTML=12+8;
 	</script>
+	<hr>
 
+	<h2>Nueva funcion de la pagiana web document.writer</h2>
+	<p>Podremos escribir lo que queramos pero</p>
+
+	<p>No se debe sponer el write de primero por que sobre escribe sobre todo el documento lo ideal q sea al  final</p>
+
+	<script> document.write(11*4);</script>
+	<hr>
+	<h2>Probando el document writer</h2>
+	<p>Dice que elimina todo</p>
+	<button type="button" onclick="document.write(3+8)">click</button>
 </body>
 </html>
