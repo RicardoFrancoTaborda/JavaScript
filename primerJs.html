@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-		function miFuncion(){
-			document.getElementById('demo').innerHTML="Ponemos aca lo que queremos que aparezca al momento de dar click  en el primer boton PRIMER PRUEBA";
-		}
-
-		function otraFuncion() {
-			document.getElementById('demo').innerHTML="Pondremos lo que deseamos  al darle un segundo click en otro boton SEGUNDA PRUEBA";
-		}
-	</script>
+	
 </head>
 <body>
-	<h2>Encabezado JavaScript</h2>
-	<p id="demo">Dira algo inicialmente prueba</p>
-	<button type="button" onclick="miFuncion()">Prueba 1</button>
-	<button type="button1" onclick="otraFuncion()">Prueba 2</button>
+	<h2>Ventanas emergentes de alerta</h2>
+	<p>Probaremos como aparece la ventanilla emergente</p>
+	<script>
+		window.alert('Se puede escribir numeros,operaciones o texto para que salga en dicha ventanilla');
+	</script>
+	
+	<h2>Estatutos o declaraciones</h2>
+	<p>un <b>programa de javascript</b> es una lista de <b>declaraciones</b> que son executadas por un computador</p>
+
+	<p id="demo"></p>
+	<script>
+		var x,y,z;
+		x=6;
+		y=16;
+		z=y-x;
+
+		document.getElementById('demo').innerHTML="El valor de Z es "+z+".";
+	</script>
 
 	<hr>
+	<h2>Variables javascript</h2>
+	<p>numero y cadenas</p>
+	<p id="demo5"></p>
+	<script>
+		var pi=3.14;
+		var persona="Ricardo";
+		var respuesta="Me llaman asi";
 
-	<h2>Usaremos un archivo externo</h2>
-	<p id="demo2">escriba algo</p>
-	<button type="button2" onclick="miNuevaFuncion()">aceptar</button>
-	<script src="miScript.js"></script>
-
+		document.getElementById('demo5').innerHTML=pi + "<br>" +persona + "<br>" + respuesta;
+	</script>
+	
 	<hr>
+	<h2>Metodos de javascript slice</h2>
+	<p>extrae una parte de una cadena de texto con la primera y la ultima ubicacion ejemplo</p>
+	<p id="demo6"></p>
 
-	<h2>Prueba de suma</h2>
-	<p>Veremos como se usa la suma</p>
-	<p id="demo3"></p>
 
 	<script>
-		document.getElementById('demo3').innerHTML=12+8;
+		var str="banano, manzana, ciruela";
+		var res=str.slice(8,15);
+		document.getElementById('demo6').innerHTML=res;
 	</script>
+
 	<hr>
+	<h2>Reemplazar palabras</h2>
+	<p>vamos a cambiar Nacional por Atletico Nacional </p>
 
-	<h2>Nueva funcion de la pagiana web document.writer</h2>
-	<p>Podremos escribir lo que queramos pero</p>
 
-	<p>No se debe sponer el write de primero por que sobre escribe sobre todo el documento lo ideal q sea al  final</p>
+	<button onclick="miFuncion()">Dale click</button>
 
-	<script> document.write(11*4);</script>
-	<hr>
-	<h2>Probando el document writer</h2>
-	<p>Dice que elimina todo</p>
-	<button type="button" onclick="document.write(3+8)">click</button>
+	<p id="demo7">Ingresa a la pagina de el equipo Nacional</p>
+
+	<script>
+		function miFuncion(){
+			var str=document.getElementById('demo7').innerHTML;
+			var txt=str.replace("Nacional","Atletico Nacional");
+			document.getElementById('demo7').innerHTML=txt;
+		}
+
+
+	</script>
+
+	
+
 </body>
 </html>
+
