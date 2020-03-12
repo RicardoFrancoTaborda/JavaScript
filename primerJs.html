@@ -12,7 +12,7 @@
 
 	<p id="demo">minusculas a mayusculas</p>
 	<p id="demo2">MAYUSCULAS A MINUSCULAS</p>
-
+	
 
 	<script> 
 	function mayusculas(){
@@ -24,11 +24,97 @@
 			var text=document.getElementById('demo2').innerHTML;
 			document.getElementById('demo2').innerHTML=text.toLowerCase();
 		}
+		
 
 	</script>
 
 	<hr>
+	<h2>date</h2>
+	<p>pondremos el metodo date mas abajo</p>
+	<p>Estos son para traer metodos get</p>
+	<p>1 =</p>
+	<p id="prueba"></p>
+	<p>2 = año</p>
+	<p id="prueba1"></p>
+	<p>3 = mes</p>
+	<p id="prueba2"></p>
+	<p>4 =dia</p>
+	<p id="prueba3"></p>
+	<p>5 =hora</p>
+	<p id="prueba4"></p>
+	<p>6 =minutos</p>
+	<p id="prueba5"></p>
+	<p>7 =segundos</p>
+	<p id="prueba6"></p>
+	<p>8 =time</p>
+	<p id="prueba7"></p>
+	
+	<script>
+		var d= new Date();
+		document.getElementById('prueba').innerHTML = d.toDateString();
+		var d= new Date();
+		document.getElementById('prueba1').innerHTML = d.getFullYear();
+		var d= new Date();
+		document.getElementById('prueba2').innerHTML = d.getMonth();
+		var d= new Date();
+		document.getElementById('prueba3').innerHTML = d.getDate();
+		var d= new Date();
+		document.getElementById('prueba4').innerHTML = d.getHours();
+		var d= new Date();
+		document.getElementById('prueba5').innerHTML = d.getMinutes();
+		var d= new Date();
+		document.getElementById('prueba6').innerHTML = d.getSeconds();
+		var d= new Date();
+		document.getElementById('prueba7').innerHTML = d.getDay();
+	</script>
+	<hr>
 
+	<p>Estos son para insertar metodos set</p>
+	
+	<p>2 = año</p>
+	<p id="otraPrueba1"></p>
+	<p>3 = mes</p>
+	<p id="otraPrueba2"></p>
+	<p>4 =dia</p>
+	<p id="otraPrueba3"></p>
+	<p>5 =hora</p>
+	<p id="otraPrueba4"></p>
+	<p>6 =minutos</p>
+	<p id="otraPrueba5"></p>
+	<p>7 =segundos</p>
+	<p id="otraPrueba6"></p>
+	
+
+	<script>
+		
+		var f= new Date();
+		f.setFullYear(1999);
+		document.getElementById('otraPrueba1').innerHTML = f;
+
+		var f= new Date();
+		f.setMonth(7);
+		document.getElementById('otraPrueba2').innerHTML = f;
+
+		var f= new Date();
+		f.setDate(16);
+		document.getElementById('otraPrueba3').innerHTML = f;
+
+		var f= new Date();
+		 f.setHours(19);
+		document.getElementById('otraPrueba4').innerHTML = f;
+
+		var f= new Date();
+		 f.setMinutes(51);
+		document.getElementById('otraPrueba5').innerHTML = f;
+
+		var f= new Date();
+		f.setSeconds(24);
+		document.getElementById('otraPrueba6').innerHTML = f;
+
+		
+	</script>
 </body>
 </html>
 
+
+<!-- cd d:/bibliotecas/desktop/"aprendiendo html"/javaScript -->
