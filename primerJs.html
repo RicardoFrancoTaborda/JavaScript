@@ -4,69 +4,30 @@
 	
 </head>
 <body>
-	<h2>Ventanas emergentes de alerta</h2>
-	<p>Probaremos como aparece la ventanilla emergente</p>
-	<script>
-		window.alert('Se puede escribir numeros,operaciones o texto para que salga en dicha ventanilla');
-	</script>
+	<h2>Convertir en mayusculas y minusculas</h2>
 	
-	<h2>Estatutos o declaraciones</h2>
-	<p>un <b>programa de javascript</b> es una lista de <b>declaraciones</b> que son executadas por un computador</p>
-
-	<p id="demo"></p>
-	<script>
-		var x,y,z;
-		x=6;
-		y=16;
-		z=y-x;
-
-		document.getElementById('demo').innerHTML="El valor de Z es "+z+".";
-	</script>
-
-	<hr>
-	<h2>Variables javascript</h2>
-	<p>numero y cadenas</p>
-	<p id="demo5"></p>
-	<script>
-		var pi=3.14;
-		var persona="Ricardo";
-		var respuesta="Me llaman asi";
-
-		document.getElementById('demo5').innerHTML=pi + "<br>" +persona + "<br>" + respuesta;
-	</script>
+	<button onclick="mayusculas()">Mayusculas</button>
+	<button onclick="minusculas()">minusculas</button>
 	
-	<hr>
-	<h2>Metodos de javascript slice</h2>
-	<p>extrae una parte de una cadena de texto con la primera y la ultima ubicacion ejemplo</p>
-	<p id="demo6"></p>
+
+	<p id="demo">minusculas a mayusculas</p>
+	<p id="demo2">MAYUSCULAS A MINUSCULAS</p>
 
 
-	<script>
-		var str="banano, manzana, ciruela";
-		var res=str.slice(8,15);
-		document.getElementById('demo6').innerHTML=res;
-	</script>
+	<script> 
+	function mayusculas(){
+		var texto=document.getElementById('demo').innerHTML;
+		document.getElementById('demo').innerHTML=texto.toUpperCase();
 
-	<hr>
-	<h2>Reemplazar palabras</h2>
-	<p>vamos a cambiar Nacional por Atletico Nacional </p>
-
-
-	<button onclick="miFuncion()">Dale click</button>
-
-	<p id="demo7">Ingresa a la pagina de el equipo Nacional</p>
-
-	<script>
-		function miFuncion(){
-			var str=document.getElementById('demo7').innerHTML;
-			var txt=str.replace("Nacional","Atletico Nacional");
-			document.getElementById('demo7').innerHTML=txt;
+	}
+	function minusculas(){
+			var text=document.getElementById('demo2').innerHTML;
+			document.getElementById('demo2').innerHTML=text.toLowerCase();
 		}
 
-
 	</script>
 
-	
+	<hr>
 
 </body>
 </html>
