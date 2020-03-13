@@ -4,114 +4,57 @@
 	
 </head>
 <body>
-	<h2>Convertir en mayusculas y minusculas</h2>
-	
-	<button onclick="mayusculas()">Mayusculas</button>
-	<button onclick="minusculas()">minusculas</button>
-	
+	<h2>Diferencias entre el in y el of en un ciclo for</h2>
+	<p>Of</p>
+	<script>
+		var txt='NACIONAL';
+		var x;
 
-	<p id="demo">minusculas a mayusculas</p>
-	<p id="demo2">MAYUSCULAS A MINUSCULAS</p>
-	
-
-	<script> 
-	function mayusculas(){
-		var texto=document.getElementById('demo').innerHTML;
-		document.getElementById('demo').innerHTML=texto.toUpperCase();
-
-	}
-	function minusculas(){
-			var text=document.getElementById('demo2').innerHTML;
-			document.getElementById('demo2').innerHTML=text.toLowerCase();
+		for(x of txt){
+			document.write(x+"<br>");
 		}
-		
-
 	</script>
 
 	<hr>
-	<h2>date</h2>
-	<p>pondremos el metodo date mas abajo</p>
-	<p>Estos son para traer metodos get</p>
-	<p>1 =</p>
-	<p id="prueba"></p>
-	<p>2 = año</p>
-	<p id="prueba1"></p>
-	<p>3 = mes</p>
-	<p id="prueba2"></p>
-	<p>4 =dia</p>
-	<p id="prueba3"></p>
-	<p>5 =hora</p>
-	<p id="prueba4"></p>
-	<p>6 =minutos</p>
-	<p id="prueba5"></p>
-	<p>7 =segundos</p>
-	<p id="prueba6"></p>
-	<p>8 =time</p>
-	<p id="prueba7"></p>
-	
+	 <p>In</p>
+	 <p>El enunciado for / in recorre las propiedades de un objeto.</p>
+	 <p id="demo"></p>
+
+	 <script>
+	 	var txt="";
+	 	var persona={nombre:"Ricardo", apellido:"Franco", edad:35};
+	 	var x;
+	 	for(x in persona){
+	 		txt =txt+persona[x]+" ";
+	 	}
+	 	document.getElementById('demo').innerHTML=txt;
+	 </script>
+	<hr>
+	<p>break, rompe la continuidad del ciclo a partir del 5</p>
+	<p id="demo1"></p>
+
 	<script>
-		var d= new Date();
-		document.getElementById('prueba').innerHTML = d.toDateString();
-		var d= new Date();
-		document.getElementById('prueba1').innerHTML = d.getFullYear();
-		var d= new Date();
-		document.getElementById('prueba2').innerHTML = d.getMonth();
-		var d= new Date();
-		document.getElementById('prueba3').innerHTML = d.getDate();
-		var d= new Date();
-		document.getElementById('prueba4').innerHTML = d.getHours();
-		var d= new Date();
-		document.getElementById('prueba5').innerHTML = d.getMinutes();
-		var d= new Date();
-		document.getElementById('prueba6').innerHTML = d.getSeconds();
-		var d= new Date();
-		document.getElementById('prueba7').innerHTML = d.getDay();
+		var text="";
+		var i;
+		for(i=0;i<10;i++){
+			if(i===5) {break;}
+			text +=  " El numero es "+ i + "<br>";
+		}
+		document.getElementById('demo1').innerHTML=text;
 	</script>
 	<hr>
 
-	<p>Estos son para insertar metodos set</p>
-	
-	<p>2 = año</p>
-	<p id="otraPrueba1"></p>
-	<p>3 = mes</p>
-	<p id="otraPrueba2"></p>
-	<p>4 =dia</p>
-	<p id="otraPrueba3"></p>
-	<p>5 =hora</p>
-	<p id="otraPrueba4"></p>
-	<p>6 =minutos</p>
-	<p id="otraPrueba5"></p>
-	<p>7 =segundos</p>
-	<p id="otraPrueba6"></p>
-	
-
+	<p>continue, solo elimina de el ciclo el que no deseamos que aparezca en este caso el 5</p>
+	<p id="demo2"></p>
 	<script>
-		
-		var f= new Date();
-		f.setFullYear(1999);
-		document.getElementById('otraPrueba1').innerHTML = f;
+		var text="";
+		var i;
+		for(i = 0; i<10;i++){
+			if(i===5){continue;}
+			text+="El numero es "+i+ "<br>";
+		}
+		document.getElementById('demo2').innerHTML=text;
 
-		var f= new Date();
-		f.setMonth(7);
-		document.getElementById('otraPrueba2').innerHTML = f;
-
-		var f= new Date();
-		f.setDate(16);
-		document.getElementById('otraPrueba3').innerHTML = f;
-
-		var f= new Date();
-		 f.setHours(19);
-		document.getElementById('otraPrueba4').innerHTML = f;
-
-		var f= new Date();
-		 f.setMinutes(51);
-		document.getElementById('otraPrueba5').innerHTML = f;
-
-		var f= new Date();
-		f.setSeconds(24);
-		document.getElementById('otraPrueba6').innerHTML = f;
-
-		
 	</script>
 </body>
 </html>
