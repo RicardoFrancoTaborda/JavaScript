@@ -4,60 +4,49 @@
 	
 </head>
 <body>
-	<h2>Diferencias entre el in y el of en un ciclo for</h2>
-	<p>Of</p>
-	<script>
-		var txt='NACIONAL';
-		var x;
+	<h2>Como atrapar errores</h2>
+	<p>veremos con el ejemplo como capturar los posibles errores que ocurren normalmente</p>
 
-		for(x of txt){
-			document.write(x+"<br>");
+	<p id="demo"></p>
+
+	<script>
+		try {
+			addalert("bienvenido invitado")
+		} catch(err){
+			document.getElementById('demo').innerHTML=err.message;
 		}
 	</script>
-
 	<hr>
-	 <p>In</p>
-	 <p>El enunciado for / in recorre las propiedades de un objeto.</p>
-	 <p id="demo"></p>
 
-	 <script>
-	 	var txt="";
-	 	var persona={nombre:"Ricardo", apellido:"Franco", edad:35};
-	 	var x;
-	 	for(x in persona){
-	 		txt =txt+persona[x]+" ";
-	 	}
-	 	document.getElementById('demo').innerHTML=txt;
-	 </script>
-	<hr>
-	<p>break, rompe la continuidad del ciclo a partir del 5</p>
-	<p id="demo1"></p>
-
+	<h2>EJEMPLO</h2>
+	<p>Veremos como se comporta la captura de los erroresen plano</p>
+	<p>ingrese un numero entre 5 y 10</p>
+	<input id="demo1" type="text">
+	<button type="button" onclick="miFuncion()">Probando el ingreso</button>
+	<p id="p01"></p>
 	<script>
-		var text="";
-		var i;
-		for(i=0;i<10;i++){
-			if(i===5) {break;}
-			text +=  " El numero es "+ i + "<br>";
+		function  miFuncion(){
+			var message, x;
+			message=document.getElementById('p01');
+			message.innerHTML="";
+			x = document.getElementById('demo1').value;
+			try {
+				if(x=="") throw "vacio";
+				if(isNaN(x)) throw "no es un numero";
+				x=Number(x);
+				if(x<5)throw "numero es menor a 5";
+				if(x>10) throw "numero es mayor que 10";
+			}
+			catch(err){
+				message.innerHTML="El valor que ingreso " + err
+			}
+			finally {
+				document.getElementById('demo1').value="";
+			}
 		}
-		document.getElementById('demo1').innerHTML=text;
-	</script>
-	<hr>
-
-	<p>continue, solo elimina de el ciclo el que no deseamos que aparezca en este caso el 5</p>
-	<p id="demo2"></p>
-	<script>
-		var text="";
-		var i;
-		for(i = 0; i<10;i++){
-			if(i===5){continue;}
-			text+="El numero es "+i+ "<br>";
-		}
-		document.getElementById('demo2').innerHTML=text;
-
 	</script>
 </body>
 </html>
 
 
-<!-- cd d:/bibliotecas/desktop/"aprendiendo html"/javaScript -->
+<!--cd d:/bibliotecas/desktop/"aprendiendo html"/javaScript --> 
